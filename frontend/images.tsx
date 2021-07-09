@@ -9,6 +9,9 @@ export function ImageIcon({name}) {
         'pptx': pptxIcon,
         'xlsx': xlsxIcon,
         'png': pngIcon,
+        'google-docs': googleDocsIcon,
+        'google-slides':googleSlidesIcon,
+        'google-sheets': googleSheetIcon,
         'master-logo-white': masterLogoWhite,
         'master-logo-blue': masterLogoBlue,
         'select-record': selectRecord,
@@ -134,6 +137,48 @@ const download = <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
     </g>
 </svg>
 
+
 const sync = <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M9.99967 3.33334V0.833344L6.66634 4.16668L9.99967 7.50001V5.00001C12.758 5.00001 14.9997 7.24168 14.9997 10C14.9997 10.8417 14.7913 11.6417 14.4163 12.3333L15.633 13.55C16.283 12.525 16.6663 11.3083 16.6663 10C16.6663 6.31668 13.683 3.33334 9.99967 3.33334ZM9.99967 15C7.24134 15 4.99967 12.7583 4.99967 10C4.99967 9.15834 5.20801 8.35834 5.58301 7.66668L4.36634 6.45001C3.71634 7.47501 3.33301 8.69168 3.33301 10C3.33301 13.6833 6.31634 16.6667 9.99967 16.6667V19.1667L13.333 15.8333L9.99967 12.5V15Z" fill="#757575"/>
+</svg>
+
+const googleDocsIcon = <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 5.17612C4 3.97428 4.97428 3 6.17612 3H23.6478C26.0514 3 28 4.94856 28 7.35224V27.8239C28 29.0257 27.0257 30 25.8239 30H6.17612C4.97428 30 4 29.0257 4 27.8239V5.17612Z" fill="#3D90F4"/>
+<path d="M19.1875 12V3H23.9477C26.3514 3 28.3 4.94856 28.3 7.35224V12H19.1875Z" fill="white" fill-opacity="0.3"/>
+<path opacity="0.1" d="M28 19.5018L19 12.0018H28V19.5018Z" fill="black"/>
+<rect x="9" y="15" width="13" height="1" fill="white"/>
+<rect x="9" y="15" width="13" height="1" fill="white"/>
+<rect x="9" y="15" width="13" height="1" fill="white"/>
+<rect x="9" y="15" width="13" height="1" fill="white"/>
+<rect x="9" y="18" width="13" height="1" fill="white"/>
+<rect x="9" y="18" width="13" height="1" fill="white"/>
+<rect x="9" y="18" width="13" height="1" fill="white"/>
+<rect x="9" y="18" width="13" height="1" fill="white"/>
+<rect x="9" y="21" width="13" height="1" fill="white"/>
+<rect x="9" y="21" width="13" height="1" fill="white"/>
+<rect x="9" y="21" width="13" height="1" fill="white"/>
+<rect x="9" y="21" width="13" height="1" fill="white"/>
+<rect x="9" y="24" width="9" height="1" fill="white"/>
+<rect x="9" y="24" width="9" height="1" fill="white"/>
+<rect x="9" y="24" width="9" height="1" fill="white"/>
+<rect x="9" y="24" width="9" height="1" fill="white"/>
+</svg>
+
+
+const googleSlidesIcon = <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 5.17612C4 3.97428 4.97428 3 6.17612 3H23.6478C26.0514 3 28 4.94856 28 7.35224V27.8239C28 29.0257 27.0257 30 25.8239 30H6.17612C4.97428 30 4 29.0257 4 27.8239V5.17612Z" fill="#F7C644"/>
+    <path d="M19.1875 12V3H23.9477C26.3514 3 28.3 4.94856 28.3 7.35224V12H19.1875Z" fill="white" fill-opacity="0.3"/>
+    <path opacity="0.1" d="M28 19.5018L19 12.0018H28V19.5018Z" fill="black"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14C10.8954 14 10 14.8954 10 16V24C10 25.1046 10.8954 26 12 26H20C21.1046 26 22 25.1046 22 24V16C22 14.8954 21.1046 14 20 14H12ZM12 16C11.4477 16 11 16.4477 11 17V22C11 22.5523 11.4477 23 12 23H20C20.5523 23 21 22.5523 21 22V17C21 16.4477 20.5523 16 20 16H12Z" fill="white"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14C10.8954 14 10 14.8954 10 16V24C10 25.1046 10.8954 26 12 26H20C21.1046 26 22 25.1046 22 24V16C22 14.8954 21.1046 14 20 14H12ZM12 16C11.4477 16 11 16.4477 11 17V22C11 22.5523 11.4477 23 12 23H20C20.5523 23 21 22.5523 21 22V17C21 16.4477 20.5523 16 20 16H12Z" fill="white"/>
+</svg>
+
+const googleSheetIcon = <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 5.17612C4 3.97428 4.97428 3 6.17612 3H23.6478C26.0514 3 28 4.94856 28 7.35224V27.8239C28 29.0257 27.0257 30 25.8239 30H6.17612C4.97428 30 4 29.0257 4 27.8239V5.17612Z" fill="#48A44C"/>
+    <path d="M19.1875 12V3H23.9477C26.3514 3 28.3 4.94856 28.3 7.35224V12H19.1875Z" fill="white" fill-opacity="0.3"/>
+    <path opacity="0.1" d="M28 19.5018L19 12.0018H28V19.5018Z" fill="black"/>
+    <rect x="9.5" y="14.5" width="12" height="9" stroke="white"/>
+    <rect x="14" y="15" width="1" height="8" fill="white"/>
+    <rect x="10" y="18" width="1" height="11" transform="rotate(-90 10 18)" fill="white"/>
+    <rect x="10" y="21" width="1" height="11" transform="rotate(-90 10 21)" fill="white"/>
 </svg>

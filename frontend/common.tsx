@@ -5,6 +5,7 @@ import {
   loadCSSFromString,
   Loader,
   Text,
+  Tooltip,
 } from '@airtable/blocks/ui';
 import React from 'react';
 import { ImageIcon } from './images';
@@ -110,47 +111,82 @@ export function GeneratedDocumentRow({
   document: DocupilotAirtable.GeneratedDocument;
 }) {
   return (
-    <Box className="generated-document" display="flex" paddingY="12px">
-      <Text flex="1" fontWeight="500" fontSize="14px" textColor="light">
-        {document.record_name}
-      </Text>
+    <>
+      <Box>
+        <Text
+          flex="1"
+          fontWeight="500"
+          fontSize="14px"
+          display="flex"
+          justifyContent="center"
+          paddingTop="12px"
+        >
+          {document.record_name}
+        </Text>
+      </Box>
       <Box
-        paddingX="12px"
-        position="relative"
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-        }}
+        className="generated-document"
+        display="flex"
+        paddingY="12px"
+        alignItems="center"
+        justifyContent="center"
       >
         <Box
+          paddingX="12px"
+          position="relative"
           style={{
-            transform: 'scale(0.7)',
-            position: 'absolute',
-            left: '-16px',
-            top: '-9px',
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
-          <ImageIcon name={document.file_name.split('.').pop()} />
-        </Box>
-        <Text fontSize="12px" textColor="#B3B3B3">
-          {document.file_name}
-        </Text>
-        {document.url ? (
-          // @ts-ignore
-          //  ignoring this as Link needs a mandatory child, against AirTable docs
-          <Link
+          <Box>
+            <ImageIcon name={document.file_name.split('.').pop()} />
+          </Box>
+          <Box
             style={{
-              paddingLeft: '4px',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
             }}
-            href={document.url}
-            target="_blank"
-            icon="download"
-            aria-label={`Download ${document.file_name}`}
-          />
-        ) : (
-          <></>
-        )}
+          ></Box>
+          <Box>
+            <Tooltip
+              content={document.file_name}
+              placementX={Tooltip.placements.CENTER}
+              placementY={Tooltip.placements.BOTTOM}
+              shouldHideTooltipOnClick={true}
+            >
+              <p
+                style={{
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  width: '100px',
+                  fontSize: '12px',
+                  color: '#B3B3B3',
+                }}
+              >
+                {document.file_name}
+              </p>
+            </Tooltip>
+          </Box>
+          {document.url ? (
+            // @ts-ignore
+            //  ignoring this as Link needs a mandatory child, against AirTable docs
+            <Link
+              style={{
+                paddingLeft: '4px',
+              }}
+              href={document.url}
+              target="_blank"
+              icon={<ImageIcon name="download" />}
+              aria-label={`Download ${document.file_name}`}
+            />
+          ) : (
+            <></>
+          )}
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }
