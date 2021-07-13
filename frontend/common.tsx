@@ -161,7 +161,7 @@ export function GeneratedDocumentRow({
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
-                  width: '100px',
+                  width: 'calc(100vw - 250px)',
                   fontSize: '12px',
                   color: '#B3B3B3',
                 }}
