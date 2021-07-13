@@ -172,7 +172,7 @@ export function GeneratedDocumentRow({
           </Box>
           {document.url ? (
             // @ts-ignore
-            //  ignoring this as Link needs a mandatory child, against AirTable docs
+            // ignoring as Link needs mandatory child, but Airtable link with icon inserts a child element
             <Link
               style={{
                 paddingLeft: '4px',
